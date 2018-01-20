@@ -1,17 +1,12 @@
 import React, {Component} from 'react'
-import {connect} from 'react-redux'
 import {Route, Switch, Router} from 'react-router-dom'
-import PropTypes from 'prop-types'
 import history from './history'
-import {Main} from './components'
+import {Main, Chords} from './components'
 
 /**
  * COMPONENT
  */
 class Routes extends Component {
-  componentDidMount () {
-    // this.props.loadInitialData()
-  }
 
   render () {
 
@@ -20,6 +15,7 @@ class Routes extends Component {
         <Main>
           <Switch>
             <Route path="/" component={Main} />
+            <Route path="/chords" component={Chords} />
           </Switch>
         </Main>
       </Router>
@@ -27,20 +23,5 @@ class Routes extends Component {
   }
 }
 
-/**
- * CONTAINER
- */
-const mapState = (state) => {
-  return {}
-}
+export default Routes
 
-const mapDispatch = (dispatch) => {
-  return {}
-}
-
-export default connect(mapState, mapDispatch)(Routes)
-
-/**
- * PROP TYPES
- */
-Routes.propTypes = {}
