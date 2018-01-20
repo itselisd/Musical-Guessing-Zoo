@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Route, Switch, Router} from 'react-router-dom'
+import PropTypes from 'prop-types'
+import history from './history'
 import {Main} from './components'
 
 /**
@@ -8,7 +10,7 @@ import {Main} from './components'
  */
 class Routes extends Component {
   componentDidMount () {
-    this.props.loadInitialData()
+    // this.props.loadInitialData()
   }
 
   render () {
@@ -17,18 +19,7 @@ class Routes extends Component {
       <Router history={history}>
         <Main>
           <Switch>
-            {/* Routes placed here are available to all visitors */}
-            <Route path="/login" component={Login} />
-            <Route path="/signup" component={Signup} />
-            {
-              isLoggedIn &&
-                <Switch>
-                  {/* Routes placed here are only available after logging in */}
-                  <Route path="/home" component={UserHome} />
-                </Switch>
-            }
-            {/* Displays our Login component as a fallback */}
-            <Route component={Login} />
+            <Route path="/" component={Main} />
           </Switch>
         </Main>
       </Router>
@@ -36,14 +27,20 @@ class Routes extends Component {
   }
 }
 
+/**
+ * CONTAINER
+ */
+const mapState = (state) => {
+  return {}
+}
 
 const mapDispatch = (dispatch) => {
-  return {
-    loadInitialData () {
-      dispatch(me())
-    }
-  }
+  return {}
 }
 
 export default connect(mapState, mapDispatch)(Routes)
 
+/**
+ * PROP TYPES
+ */
+Routes.propTypes = {}
