@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'Risque', cursive;
+  font-family: 'Josefin Slab', cursive;
   background-color: rgb(13, 133, 13);
   background: -webkit-linear-gradient(-90deg, rgb(65, 143, 100), rgb(3, 111, 34));
   height: 100%;
@@ -30,15 +30,6 @@ form div {
   display: inline-block;
 }
 
-/* #heading {
-  font-family: 'Risque', cursive;
-  color: #DDDDDD;
-  text-align: center;
-  background-color: rgb(3, 70, 3);
-  font-size: 4em;
-  margin: 0 auto;
-} */
-
 .animals img {
   position: relative;
   width:  350px;
@@ -49,7 +40,7 @@ form div {
 }
 
 .welcome {
-  font-size: 1.65em;
+  font-size: 1.8em;
   text-align: center;
   color: #D5E2D6;
   margin-left: 202px;
@@ -57,7 +48,7 @@ form div {
 }
 
 .guess {
-  font-size: 1.65em;
+  font-size: 1.8em;
   text-align: center;
 }
 
@@ -103,7 +94,7 @@ tr td:hover { background: #666; color: #FFF; }
 }
 
 figcaption {
-  font-size: 1.65em;
+  font-size: 1.8em;
 }
 
 .chordBtns {
@@ -130,7 +121,6 @@ hr {
 
 .navBtns {
   margin: 1em;
-  z-index: 20
 }
 
 .chordList {
@@ -148,10 +138,12 @@ hr {
 }
 
 h1 {
+  font-family: 'Risque', cursive;
   color: #D5E2D6;
   text-align: center;
   line-height: 50px;
-  margin-top: -420px;
+  margin-bottom: 30px;
+  margin-top: -400px;
   -moz-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
 -webkit-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
 -o-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
@@ -172,6 +164,12 @@ span:nth-child(1), span:nth-child(9), span:nth-child(5)  {
 
 .names {
   color: #D5E2D6;
+  letter-spacing: 0.1em;
+}
+
+.names::first-letter {
+  color: rgb(0, 0, 0);
+  font-size: 150%
 }
 
 .pics {
@@ -181,7 +179,7 @@ span:nth-child(1), span:nth-child(9), span:nth-child(5)  {
   -webkit-transition: opacity .25s ease-in-out;
 }
 .pics:hover {
-  opacity: 0.65;
+  opacity: 0.55;
 }
 
 #guessCounter {

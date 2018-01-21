@@ -3,6 +3,10 @@ import Animals from './animals'
 import Home from './home'
 import Chords from './chordList'
 
+window.addEventListener("beforeunload", function () {
+  window.scrollTo(0, 0);
+});
+
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -41,8 +45,8 @@ class Main extends Component {
         <nav className='head'>
           <div className='navBtns'>
             <button className="huge ui blue button" onClick={this._onHomeClick} role="button">Home</button>
-            <button className="huge ui violet button" onClick={this._onButtonClick} role="button">Click to Play!</button>
-            <button className="huge ui teal button" onClick={this._onChartClick} role="button">Chord Chart</button>
+            <button className="huge ui violet button" onClick={this._onButtonClick} role="button"> Play</button>
+            <button className="huge ui teal button" onClick={this._onChartClick} role="button">Chords</button>
           </div>
         </nav>
         <hr />
