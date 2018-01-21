@@ -1,8 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Chords extends Component {
-  render() {
+const Chords = (props) => {
     return (
+      <div>
+      <p className='welcome'>
+      A major chord is formed by the first, third, and fifth note of a major scale.
+      <br/>
+      Here is a list of the major chords to get you started before we explore!
+      </p>
     <div className='chordList'>
       <table align='center'>
       <tbody>
@@ -88,8 +93,9 @@ class Chords extends Component {
   </tbody>
 </table>
     </div>
+    </div>
     )
-  }
+
 }
 
 export default Chords;
