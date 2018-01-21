@@ -41,7 +41,7 @@ class Main extends Component {
     return (
       <div>
       <div className="circle"></div>
-      <h1><span>Musical</span><br/><span>Guessing</span><br/><span>Zoo</span></h1>
+      <h1 onClick={this._onHomeClick}><span>Musical</span><br/><span>Guessing</span><br/><span>Zoo</span></h1>
         <nav className='head'>
           <div className='navBtns'>
             <button className="huge ui blue button" onClick={this._onHomeClick} role="button">Home</button>
