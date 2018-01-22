@@ -20,7 +20,7 @@ class Home extends Component {
       <div>
           <div className="content">
             <p className='welcome'>
-              <em>Welcome to the Musical Guessing Zoo!</em>
+              <em className='subtitle'>Welcome to the Musical Guessing Zoo!</em>
               <br/>
               Play the game where all animals have names that start with the letter of the musical note they love the most.
               <br/>

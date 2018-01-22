@@ -45,7 +45,7 @@ class Main extends Component {
         <nav className='head'>
           <div className='navBtns'>
             <button className="huge ui blue button" onClick={this._onHomeClick} role="button">Home</button>
-            <button className="huge ui violet button" onClick={this._onButtonClick} role="button"> Play</button>
+            <button className="huge ui green button" onClick={this._onButtonClick} role="button"> Play</button>
             <button className="huge ui teal button" onClick={this._onChartClick} role="button">Chords</button>
           </div>
         </nav>

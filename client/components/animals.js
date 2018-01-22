@@ -2,13 +2,11 @@ import React, { Component } from 'react'
 var Tone = require("Tone")
 var chorus = new Tone.Chorus(4, 2.5, 0.5).toMaster();
 var freeverb = new Tone.Freeverb().toMaster();
-var dist = new Tone.Distortion(0.4).toMaster();
 freeverb.dampening.value = 400;
 freeverb.roomSize.vallue = 0.3;
-var synth = new Tone.PolySynth(4, Tone.MonoSynth)
+var synth = new Tone.PolySynth(4, Tone.Synth)
 .connect(chorus)
 .connect(freeverb)
-.connect(dist);
 
 let animalImgs = {
   C: {
@@ -304,16 +302,16 @@ class Animals extends Component {
     return (
         <div>
           <div id='guessCounter' className='welcome'>
-            <div>
               {this.state.total > 0 ? (this.state.right + ' / ' + this.state.total) : null}
             </div>
+            <div className='playB'>
             <div className="ui labeled icon buttons">
               <button value={[animal[shuffledArr[0]].note, animal[shuffledArr[1]].note, animal[shuffledArr[2]].note]} onClick={this.chordClick} className="ui button">
               <i className="play icon"></i>
                 Play the Chord
               </button>
             </div>
-          </div>
+            </div>
           <div className='guess welcome'>
             Which chord do these animals represent?
           </div>
