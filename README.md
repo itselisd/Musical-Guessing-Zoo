@@ -6,21 +6,11 @@
 * If you see a great white baring its teeth under an animal that means its note is sharp(#).
 * If there is a hammerhead swimming underneath, its note is flat(b).
 
-## Linting
-
-Any linter rule that you object to can be "turned off" in `.eslintrc.json`. You may also choose an entirely different config:
-
-* [Standard style guide](https://standardjs.com/)
-* [Airbnb style guide](https://github.com/airbnb/javascript)
-* [Google style guide](https://google.github.io/styleguide/jsguide.html)
-
 ## Start
 
 `npm run start-dev` will make great things happen!
 
 If you want to run the server and/or webpack separately, you can also `npm run start-server` and `npm run build-client`.
-
-From there, just follow your bliss.
 
 ## Deployment
 
